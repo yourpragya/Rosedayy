@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forever Us 🌹</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  overflow: hidden;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Floating Roses & Hearts */
+.fall {
+  position: fixed;
+  top: -40px;
+  font-size: 26px;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-40px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/* Center Card */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 35px;
+  padding: 35px 30px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255, 0, 80, 0.6);
+  animation: heartbeat 3s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+h1 {
+  color: #fff0f5;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+
+/* Buttons */
+button {
+  margin: 10px 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+.yes:hover {
+  background: #ff1f4a;
+}
+
+.forever {
+  background: #ffd1dc;
+  color: #8b0000;
+}
+
+.forever:hover {
+  background: #ffc0cb;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-box {
+  background: #fff0f5;
+  color: #8b0000;
+  padding: 25px;
+  border-radius: 25px;
+  width: 300px;
+  text-align: center;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Falling Roses & Hearts -->
+<script>
+const icons = ["🌹", "❤️", "💖", "🌸"];
+for (let i = 0; i < 45; i++) {
+  let el = document.createElement("div");
+  el.className = "fall";
+  el.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = 4 + Math.random() * 6 + "s";
+  document.body.appendChild(el);
+}
+</script>
+
+<div class="container">
+  <div class="card">
+    <h1>Happy Rose Day 🌹</h1>
+
+    <p>
+      If love had a shape, it would be a rose —  
+      but if love had a name… it would be <b>you</b> 💖
+    </p>
+
+    <p>
+      You make my world softer, happier, and full of meaning.  
+      This rose carries all my feelings to you 🤍
+    </p>
+
+    <p>
+      Today, tomorrow, and every day after…  
+      my heart chooses you 🌹
+    </p>
+
+    <button class="yes" onclick="openPopup()">I Love You 💝</button>
+    <button class="forever">Yes, Forever 💌</button>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h3>Always & Forever 💞</h3>
+    <p>
+      No matter where life takes us,  
+      my heart will always find its way back to you 🌹
+    </p>
+    <button class="yes" onclick="closePopup()">Close 💖</button>
+  </div>
+</div>
+
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
