@@ -163,7 +163,7 @@ for (let i = 0; i < 45; i++) {
     </p>
 
     <button class="yes" onclick="openPopup()">I Love You 💝</button>
-    <button class="forever">Yes, Forever 💌</button>
+    <button class="forever" onclick="openForever()">Yes, Forever 💌</button>q
   </div>
 </div>
 
@@ -173,12 +173,28 @@ for (let i = 0; i < 45; i++) {
     <h3>Always & Forever 💞</h3>
     <p>
       No matter where life takes us,  
-      my heart will always find its way back to you 🌹
+      my heart will always find its way back to you betuu🌹
     </p>
     <button class="yes" onclick="closePopup()">Close 💖</button>
   </div>
 </div>
-
+<div class="popup" id="foreverPopup">
+  <div class="popup-box">
+    <h3>My Forever 💍</h3>
+    <p>
+      Choosing forever with you means choosing love,  
+      laughter, silly fights, late-night talks,  
+      and a lifetime of holding hands 🌹🤍<br><br>
+      Thank you for being my safe place,  
+      my happiness, my home always i am really nothing without you, 
+      i really love you soo muchh but sometimes i can't express but i never loved someone the way i love you❤️
+      thank you for being mine and mine for always at my lower and highs❤️
+      you are the only best decision i made in my life 🥺❤️
+      loveeee youuuu soo muchhh betuu🥺❤️
+    </p>
+    <button class="yes" onclick="closeForever()">Always You 💖</button>
+  </div>
+</div>
 <script>
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
@@ -187,6 +203,14 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 </script>
-
+<script>
+function openForever() {
+  document.getElementById("foreverPopup").style.display = "flex";
+}
+function closeForever() {
+  document.getElementById("foreverPopup").style.display = "none";
+}
+</script>
+  
 </body>
 </html>
